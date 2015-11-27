@@ -1,0 +1,23 @@
+.download-quora-answers-processing {
+    background-color: white;
+    padding: 10px !important;
+    text-align: justify;
+}
+
+.download-quora-answers-processing .ContentHeader {
+    min-height: 0;
+    padding: 0;
+}
+
+.download-quora-answers-processing .EventHeader,
+.download-quora-answers-processing .photo_tooltip,
+.download-quora-answers-processing .credibility_facts,
+.download-quora-answers-processing .qtext_image_wrapper,
+.download-quora-answers-processing .ContentFooter,
+.download-quora-answers-processing .ActionBar {
+    display: none;
+}
+
+.download-quora-answers-processing .header {
+    padding-bottom: 0 !important;
+}

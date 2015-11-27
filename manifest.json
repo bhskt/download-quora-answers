@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Download Quora Answers",
+    "version": "2015.11.27",
+    "description": "Use this extension to download answers from Quora.com as JPEG images, directly to your local drive - for offline reading & sharing.",
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+    },
+    "author": "Bhaskar Tiwari",
+    "content_scripts": [
+        {
+            "matches": ["*://*.quora.com/*"],
+            "css": [
+                "style.css"
+            ],
+            "js": [
+                "bower_components/canvas-toBlob.js/canvas-toBlob.js",
+                "bower_components/FileSaver.js/FileSaver.min.js",
+                "bower_components/html2canvas/build/html2canvas.min.js",
+                "script.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
