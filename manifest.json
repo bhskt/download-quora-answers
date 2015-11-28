@@ -1,12 +1,17 @@
 {
     "manifest_version": 2,
     "name": "Download Quora Answers",
-    "version": "2015.11.28.4",
+    "version": "2015.11.28.5",
     "description": "Use this extension to download answers from Quora.com as JPEG images, directly to your local drive - for offline reading & sharing.",
     "icons": {
         "16": "icons/16.png",
         "48": "icons/48.png",
         "128": "icons/128.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
     },
     "author": "Bhaskar Tiwari",
     "content_scripts": [
@@ -23,5 +28,10 @@
             ],
             "run_at": "document_start"
         }
+    ],
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.quoracdn.net/*"
     ]
 }

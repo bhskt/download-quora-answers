@@ -39,7 +39,8 @@
                                                 canvas.toBlob(function (blob) {
                                                     saveAs(blob, answer.id + '.jpg');
                                                 }, 'image/jpeg', 1);
-                                            }
+                                            },
+                                            useCORS: true
                                         });
                                     }
                                     if (answer.matches('.AnswerBase')) {
