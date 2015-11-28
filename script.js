@@ -1,4 +1,4 @@
-/*global MutationObserver, html2canvas, saveAs*/
+/*global MutationObserver, html2canvas, saveAs, window*/
 (function () {
     'use strict';
     var mutationObserver = new MutationObserver(function (mutations) {
@@ -17,6 +17,7 @@
                                 downloadButton.innerText = 'Download';
                                 downloadButton.onclick = function (event) {
                                     answer.classList.add('download-quora-answers-processing');
+                                    var scroll = {x: window.scrollX, y: window.scrollY};
                                     var question;
                                     if (answer.matches('.AnswerBase')) {
                                         question = document.querySelector('.grid_page .header').cloneNode();
@@ -25,6 +26,7 @@
                                     }
                                     html2canvas(answer, {
                                         onrendered: function (canvas) {
+                                            window.scrollTo(scroll.x, scroll.y);
                                             answer.classList.remove('download-quora-answers-processing');
                                             if (question) {
                                                 question.remove();
