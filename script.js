@@ -30,6 +30,7 @@
                                             answer.classList.remove('download-quora-answers-processing');
                                             if (question) {
                                                 question.remove();
+                                                answer = answer.parentElement;
                                             }
                                             canvas.toBlob(function (blob) {
                                                 saveAs(blob, answer.id + '.jpg');
