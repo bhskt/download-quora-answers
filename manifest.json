@@ -10,7 +10,7 @@
     },
     "background": {
         "scripts": [
-            "background.js"
+            "scripts/background.js"
         ]
     },
     "author": "Bhaskar Tiwari",
@@ -24,7 +24,7 @@
                 "bower_components/canvas-toBlob.js/canvas-toBlob.js",
                 "bower_components/FileSaver.js/FileSaver.min.js",
                 "bower_components/html2canvas/build/html2canvas.min.js",
-                "script.js"
+                "scripts/content.js"
             ],
             "run_at": "document_start"
         }
