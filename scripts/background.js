@@ -4,5 +4,5 @@
     chrome.webRequest.onHeadersReceived.addListener(function (response) {
         response.responseHeaders.push({name: 'Access-Control-Allow-Origin', value: '*'});
         return {responseHeaders: response.responseHeaders};
-    }, {urls: ["*://*.quoracdn.net/*"]}, ["blocking", "responseHeaders"]);
+    }, {urls: ["*://*.quoracdn.net/*", "*://*.youtube.com/*"]}, ["blocking", "responseHeaders"]);
 }());
