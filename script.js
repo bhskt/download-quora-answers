@@ -46,6 +46,7 @@
                                         question = document.querySelector('.grid_page .header').cloneNode();
                                         question.appendChild(document.querySelector('.grid_page .header .question_text_edit').cloneNode(true));
                                         answer.insertBefore(question, answer.firstChild);
+                                        proceed();
                                     } else if (moreButton) {
                                         var expandableObserver;
                                         expandableObserver = new MutationObserver(function () {
